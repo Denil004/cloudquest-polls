@@ -1,0 +1,16 @@
+{% extends "polls/base.html" %}
+{% block title %}Already Voted{% endblock %}
+
+{% block content %}
+<div class="already-voted">
+    <h2>You have already voted</h2>
+    <p>You have already submitted your vote for:</p>
+
+    <strong>{{ question.question_text }}</strong>
+
+    <br><br>
+    <a class="btn secondary" href="{% url 'polls:results' question.id %}">
+        View Results
+    </a>
+</div>
+{% endblock %}

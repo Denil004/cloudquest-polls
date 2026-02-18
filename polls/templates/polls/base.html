@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Polls{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+</head>
+<body>
+
+<header class="navbar">
+    <h1>🗳 Polls System</h1>
+    <a href="{% url 'polls:index' %}">Home</a>
+</header>
+
+<main class="container">
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="footer">
+    <p>© 2025 Polls App</p>
+</footer>
+
+</body>
+</html>
